@@ -1,6 +1,6 @@
 {
   "name": "@tomassotech/simpleondemandcache",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple Key-Value cache. Extends SimpleKeyValueStore to allow for automatic retrieval of empty key values, automatic cache trimming, and item lifetimes",
   "main": "index.js",
   "scripts": {
