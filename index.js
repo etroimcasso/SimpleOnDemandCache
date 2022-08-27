@@ -1,10 +1,16 @@
 const KeyValueStore = require('@tomassotech/simplekeyvaluestore')
 
-const OnDemandCache = (maxSize, options = {}) => {
+const OnDemandCache = (maxSize = 0, options = {}) => {
     const { cacheLifetime, itemLifetime } = options;
     const itemsHaveLifetime = typeof (itemLifetime) !== 'undefined';
     const cacheHasLifetime = typeof (cacheLifetime) !== 'undefined';
-    const __keyValueStore = KeyValueStore(maxSize);
+    let __keyValueStore;
+    try {
+        __keyValueStore = KeyValueStore(maxSize > 0 ? maxSize : undefined);
+    }
+    catch (error) {
+        throw error;
+    }
     const __removeItem = (key) => {
         __keyValueStore.removeItem(key);
     };
