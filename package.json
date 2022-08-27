@@ -10,5 +10,9 @@
   "license": "MIT",
   "dependencies": {
     "@tomassotech/simplekeyvaluestore": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/etroimcasso/SimpleOnDemandCache"
   }
 }
